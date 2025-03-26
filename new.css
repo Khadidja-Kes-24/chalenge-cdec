@@ -1,27 +1,79 @@
-.container{
-    width: max-content;
-    margin-left: auto;
-    margin-right: auto;
+.big{
+    width: 100%;
+   direction: rtl;
+   text-align: center;
+   margin-left: auto;
+   margin-right: auto;
+   padding:    5px;
+   background-color: rgb(71, 250, 71);
+}
+img{
 
-  
-
+    width: 220px;
+    border: solid;
+    border-color: blue;
+    background: none
 }
 .clock{
-    border: 1px solid #606060;
+    width:max-content;
     color: green;
-    padding: 40px;
-    border-radius: 10px;
-    background-color:white;
-}
-.clock ul{
+    padding: 10px;
+    direction: ltr;
     list-style: none;
     display: flex;
     font-size: 40px;
     gap: 15px;
+    border: solid;  
 }
-#date{
+article{
+    height: max-content;
+    display: inline-block;
+    border:solid
+}
+p{
+    font-size: large;
+}
+h1,h2{
+    color: green;
+}
+form label , select,button{
+    padding-left: 100px;
+    padding-right: 60px;
+    border: solid;
+    word-spacing 3px;;
+    font-size: larger;
+    background: white;
+}
+
+
+ 
+h2{
+    margin-bottom:  0px;
+}
+#da{
+    padding: 5px;
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
+#date, #Date ,#da p{
+display: inline-block;
+    padding: 10px;
+    padding-bottom: 1px;
     font-size: 20px ;
-    text-align: center;
+
     padding-left: 20px;
-  
+
+}
+table{
+   
+    border: solid;
+    background: rgba(255, 255, 255, 0.959);
+    width: 90%;
+    margin: auto;
+    
+}
+th{
+    padding-bottom: 5px;
+    background: rgb(0, 128, 32);
 }
