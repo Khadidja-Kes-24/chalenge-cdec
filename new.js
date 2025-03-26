@@ -1,12 +1,19 @@
 function clock() {
-    var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    var dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    var monthNames = ["جانفي", "فيفري", "مارس", "أفريل", "ماي", "جوان ", "جويلية", "أوت", "سبتمبر", "أكتوبر", "نفمبر", "ديسمبر"];
+    var dayNames = ["الأحد", "الإثنين", "الثلاثاء", "الأربعاء", "الخميس", "الجمعة", "السبت"];
     
     var today = new Date();
+    
     
     document.getElementById('date').innerHTML = 
         dayNames[today.getDay()] + " " + today.getDate() + " " + 
         monthNames[today.getMonth()] + " " + today.getFullYear();
+
+        var hijriDate = new Intl.DateTimeFormat('ar-TN-u-ca-islamic', { 
+            weekday: 'long', day: 'numeric', month: 'long', year: 'numeric'
+        }).format(today);
+    
+        document.getElementById('Date').innerHTML = hijriDate;
     
     var h = today.getHours();
     var m = today.getMinutes();
@@ -30,4 +37,5 @@ function clock() {
 }
 
 setInterval(clock, 400);
+
 
