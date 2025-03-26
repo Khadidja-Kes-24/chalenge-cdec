@@ -138,16 +138,116 @@
           <td>19.21</td>
            </table>
           
-
-
-
-
-
-
-
-
-        </div>
+  </div>
     </div>
-        </body>
+    <h1>مواقيت الصلاة والإفطار</h1>
+    <label for="city">اختر الولاية:</label>
+    <select id="city">
+        <option value="Adrar">أدرار</option>
+        <option value="Chlef">الشلف</option>
+        <option value="Laghouat">الأغواط</option>
+        <option value="Oum El Bouaghi">أم البواقي</option>
+        <option value="Batna">باتنة</option>
+        <option value="Bejaia">بجاية</option>
+        <option value="Biskra">بسكرة</option>
+        <option value="Bechar">بشار</option>
+        <option value="Blida">البليدة</option>
+        <option value="Bouira">البويرة</option>
+        <option value="Tamanrasset">تمنراست</option>
+        <option value="Tebessa">تبسة</option>
+        <option value="Tlemcen">تلمسان</option>
+        <option value="Tiaret">تيارت</option>
+        <option value="Tizi Ouzou">تيزي وزو</option>
+        <option value="Algiers">الجزائر</option>
+        <option value="Djelfa">الجلفة</option>
+        <option value="Jijel">جيجل</option>
+        <option value="Setif">سطيف</option>
+        <option value="Saida">سعيدة</option>
+        <option value="Skikda">سكيكدة</option>
+        <option value="Sidi Bel Abbes">سيدي بلعباس</option>
+        <option value="Annaba">عنابة</option>
+        <option value="Guelma">قالمة</option>
+        <option value="Constantine">قسنطينة</option>
+        <option value="Medea">المدية</option>
+        <option value="Mostaganem">مستغانم</option>
+        <option value="Msila">المسيلة</option>
+        <option value="Mascara">معسكر</option>
+        <option value="Ouargla">ورقلة</option>
+        <option value="Oran">وهران</option>
+        <option value="El Bayadh">البيض</option>
+        <option value="Illizi">إليزي</option>
+        <option value="Bordj Bou Arreridj">برج بوعريريج</option>
+        <option value="Boumerdes">بومرداس</option>
+        <option value="El Tarf">الطارف</option>
+        <option value="Tindouf">تندوف</option>
+        <option value="Tissemsilt">تيسمسيلت</option>
+        <option value="El Oued">الوادي</option>
+        <option value="Khenchela">خنشلة</option>
+        <option value="Souk Ahras">سوق أهراس</option>
+        <option value="Tipaza">تيبازة</option>
+        <option value="Mila">ميلة</option>
+        <option value="Ain Defla">عين الدفلى</option>
+        <option value="Naama">النعامة</option>
+        <option value="Ain Temouchent">عين تموشنت</option>
+        <option value="Ghardaia">غرداية</option>
+        <option value="Relizane">غليزان</option>
+        <option value="Timimoun">تيميمون</option>
+        <option value="Bordj Badji Mokhtar">برج باجي مختار</option>
+        <option value="Ouled Djellal">أولاد جلال</option>
+        <option value="Beni Abbes">بني عباس</option>
+        <option value="In Salah">عين صالح</option>
+        <option value="In Guezzam">عين قزام</option>
+        <option value="Touggourt">تقرت</option>
+        <option value="Djanet">جانت</option>
+        <option value="El M'Ghair">المغير</option>
+        <option value="El Menia">المنيعة</option>
+    </select>
+
+    <button onclick="getPrayerTimes()">جلب المواقيت</button>
+
+    <h3 id="date"></h3>
+
+    <div id="prayer-times">
+        <table>
+            <thead>
+                <tr>
+                    <th>الصلاة</th>
+                    <th>الوقت</th>
+                </tr>
+            </thead>
+            <tbody id="times-body"></tbody>
+        </table>
+    </div>
+
+    <script>
+        function getPrayerTimes() {
+            const city = document.getElementById("city").value;
+            const apiUrl = `https://api.aladhan.com/v1/timingsByCity?city=${city}&country=Algeria&method=2`;
+
+            fetch(apiUrl)
+                .then(response => response.json())
+                .then(data => {
+                    const timings = data.data.timings;
+                    const date = data.data.date.gregorian.date;
+                    document.getElementById("date").textContent = `تاريخ اليوم: ${date}`;
+
+                    const timesBody = document.getElementById("times-body");
+                    timesBody.innerHTML = `
+                        <tr><td>الفجر</td><td>${timings.Fajr}</td></tr>
+                        <tr><td>الظهر</td><td>${timings.Dhuhr}</td></tr>
+                        <tr><td>العصر</td><td>${timings.Asr}</td></tr>
+                        <tr><td>المغرب (الإفطار)</td><td>${timings.Maghrib}</td></tr>
+                        <tr><td>العشاء</td><td>${timings.Isha}</td></tr>
+                        <tr><td>الإمساك</td><td>${timings.Imsak}</td></tr>
+                    `;
+                })
+                .catch(error => console.error("حدث خطأ أثناء جلب البيانات:", error));
+        }
+    </script>
+
+</body>
+
+</html>   
+</body>
        
 </html>
