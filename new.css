@@ -1,50 +1,81 @@
-.big{
-    width: 100%;
+body{
+    background-image: url(madina.jpg);
+    
+}
+#cnt{
+    width: 80%;
    direction: rtl;
    text-align: center;
    margin-left: auto;
    margin-right: auto;
-   padding:    5px;
-   background-color: rgb(71, 250, 71);
+
+   background-color:rgba(245, 240, 220, 0.89);
 }
 img{
-
-    width: 220px;
-    border: solid;
+margin-top: 0px;
+    width: 200px;
+    height: 150px;
+   /* border: solid;
     border-color: blue;
-    background: none
+    border-radius:  5px;*/
+
+    
+
 }
 .clock{
+    margin-bottom: 0px;
     width:max-content;
-    color: green;
-    padding: 10px;
+    color:rgba(255, 208, 0, 0.842);
     direction: ltr;
     list-style: none;
     display: flex;
-    font-size: 40px;
-    gap: 15px;
-    border: solid;  
+    font-size: 30px;
+    gap: 10px;
+    margin-top: 0px;
+    background: rgba(0, 0, 0, 0.021);
+    padding-left: 25px;
+    padding-right: 25px;
+    border: solid black;
+    background-color: black;
+
+    border-radius: 20px;
 }
 article{
-    height: max-content;
+    width: max-content;
+    position: absolute;
+    left: 0px;
+    top: 0px;
     display: inline-block;
-    border:solid
+    border-radius: 20px;
 }
-p{
-    font-size: large;
+h1,pre,article{
+    display: 
+  
+}
+pre{
+    width: max-content;
+    text-align: right;
+    font-size: 20px;
+    width: max-content;
+    word-spacing: 8px;
+    padding-right: 10px;
+margin-right: 5px;
 }
 h1,h2{
     color: green;
 }
-form label , select,button{
+form label ,button{
     padding-left: 100px;
     padding-right: 60px;
-    border: solid;
-    word-spacing 3px;;
-    font-size: larger;
-    background: white;
-}
 
+    word-spacing 3px;;
+    
+    font-size: 20px
+    background-color: ;
+}
+select{
+
+}
 
  
 h2{
@@ -66,14 +97,23 @@ display: inline-block;
 
 }
 table{
-   
+    width: 70%;
+    margin: auto;
     border: solid;
     background: rgba(255, 255, 255, 0.959);
-    width: 90%;
-    margin: auto;
+  
     
 }
 th{
     padding-bottom: 5px;
     background: rgb(0, 128, 32);
+    height: 30px;
+    font-size: larger;
+}
+td{
+    font-size: larger;
+    height: 35px;
+}
+h1{
+    letter-spacing: 50px;
 }
