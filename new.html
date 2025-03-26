@@ -6,92 +6,148 @@
     <title>Document</title>
     <link rel="stylesheet" href="new.css">
 </head>
-<body>
+<body class="big">
     <script src="new.js"></script>
+  <article>
+        <ul class="clock">
+             <li id="hours">22</li>
+             <li id="point">:</li>
+             <li id="min">30</li>
+             <li id="point">:</li>
+             <li id="sec">30</li>
+      </ul>     
+      <img src="ramadan-removebg-preview.png" alt="">
+    </article>
     <h1>رمضان مبارك</h1>
-    <p>مرحبا بكم في دليل رمضان أين ستجدون مواقيت  الصلاة ٫ الفطور والإمساك أينما كنتم إضافة لأحاديث وأدعية متنوعة سترافقكم طيلة الشهر الكريم 
-        للوصول لمواقيت الصلاة يكفي إدخال منطقتك</p>
-        <form action="">
-            <label for="wil">ادخل ولايتك</label>
-            <select name="wilaya" id="wil">
-         <option selected value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-                <option value="11">11</option>
-                <option value="12">12</option>
-                <option value="13">13</option>
-                <option value="14">14</option>
-                <option value="15">15</option>
-                <option value="16">16</option>
-                <option value="17">17</option>
-                <option value="18">18</option>
-                <option value="19">19</option>
-                <option value="20">20</option>
-                <option value="21">21</option>
-                <option value="22">22</option>
-                <option value="23">23</option>
-                <option value="24">24</option>
-                <option value="25">25</option>
-                <option value="26">26</option>
-                <option value="27">27</option>
-                <option value="28">28</option>
-                <option value="29">29</option>
-                <option value="30">30</option>
-                <option value="31">31</option>
-                <option value="32">32</option>
-                <option value="33">33</option>
-                <option value="34">34</option>
-                <option value="35">35</option>
-                <option value="36">36</option>
-                <option value="37">37</option>
-                <option value="38">38</option>
-                <option value="39">39</option>
-                <option value="40">40</option>
-                <option value="41">41</option>
-                <option value="42">42</option>
-                <option value="43">43</option>
-                <option value="44">44</option>
-                <option value="45">45</option>
-                <option value="46">46</option>
-                <option value="47">47</option>
-                <option value="48">48</option>
-                <option value="49">49</option>
-                <option value="50">50</option>
-                <option value="51">51</option>
-                <option value="52">52</option>
-                <option value="53">53</option>
-                <option value="54">54</option>
-                <option value="55">55</option>
-                <option value="56">56</option>
-                <option value="57">57</option>
-                <option value="58">58</option>
-        </select> 
+    <p>مرحبا بكم في دليل رمضان أين ستجدون مواقيت  الصلاة ٫ الفطور والإمساك أينما كنتم إضافة لأحاديث وأدعية متنوعة سترافقكم طيلة الشهر الكريم  للوصول لمواقيت الصلاة يرجى إختيارالولاية</p>
+    
+    <form action="">
+        <label for="wil">اختر الولاية</label>
+        <select name="wilaya" id="wil">
+            <option selected value="1">1 - أدرار</option>
+            <option value="2">2 - الشلف</option>
+            <option value="3">3 - الأغواط</option>
+            <option value="4">4 - أم البواقي</option>
+            <option value="5">5 - باتنة</option>
+            <option value="6">6 - بجاية</option>
+            <option value="7">7 - بسكرة</option>
+            <option value="8">8 - بشار</option>
+            <option value="9">9 - البليدة</option>
+            <option value="10">10 - البويرة</option>
+            <option value="11">11 - تمنراست</option>
+            <option value="12">12 - تبسة</option>
+            <option value="13">13 - تلمسان</option>
+            <option value="14">14 - تيارت</option>
+            <option value="15">15 - تيزي وزو</option>
+            <option value="16">16 - الجزائر</option>
+            <option value="17">17 - الجلفة</option>
+            <option value="18">18 - جيجل</option>
+            <option value="19">19 - سطيف</option>
+            <option value="20">20 - سعيدة</option>
+            <option value="21">21 - سكيكدة</option>
+            <option value="22">22 - سيدي بلعباس</option>
+            <option value="23">23 - عنابة</option>
+            <option value="24">24 - قالمة</option>
+            <option value="25">25 - قسنطينة</option>
+            <option value="26">26 - المدية</option>
+            <option value="27">27 - مستغانم</option>
+            <option value="28">28 - المسيلة</option>
+            <option value="29">29 - معسكر</option>
+            <option value="30">30 - ورقلة</option>
+            <option value="31">31 - وهران</option>
+            <option value="32">32 - البيض</option>
+            <option value="33">33 - إليزي</option>
+            <option value="34">34 - برج بوعريريج</option>
+            <option value="35">35 - بومرداس</option>
+            <option value="36">36 - الطارف</option>
+            <option value="37">37 - تندوف</option>
+            <option value="38">38 - تيسمسيلت</option>
+            <option value="39">39 - الوادي</option>
+            <option value="40">40 - خنشلة</option>
+            <option value="41">41 - سوق أهراس</option>
+            <option value="42">42 - تيبازة</option>
+            <option value="43">43 - ميلة</option>
+            <option value="44">44 - عين الدفلى</option>
+            <option value="45">45 - النعامة</option>
+            <option value="46">46 - عين تموشنت</option>
+            <option value="47">47 - غرداية</option>
+            <option value="48">48 - غيليزان</option>
+            <option value="49">49 - تيميمون</option>
+            <option value="50">50 - برج باجي مختار</option>
+            <option value="51">51 - أولاد جلال</option>
+            <option value="52">52 - بني عباس</option>
+            <option value="53">53 - عين صالح</option>
+            <option value="54">54 - عين قزام</option>
+            <option value="55">55 - تقرت</option>
+            <option value="56">56 - جانت</option>
+            <option value="57">57 - المغير</option>
+            <option value="58">58 - المنيعة</option>
+        </select>
+
+    
         <input type="submit" value="ارسال">
         </form>
+        <h2 >مواقيت الصلاة و الامساك ليوم</h2>
+        <div id="da">
+           <div id="date">الأربعاء 26 مارس 2025
+        </div><p>الموافق ل</p><div id="Date">الثلاثاء 25رمضان 1446</div>
+    </div>
+ 
        
-        <div class="container"> 
-            <div class="clock"> 
-                <div id="date">wednesday 26 March 2025 </div>
-                <ul>
-                   <li id="hours">22</li>
-                   <li id="point">:</li>
-                   <li id="min">30</li>
-                   <li id="point">:</li>
-                   <li id="sec">30</li>
-                </ul>  
-                  
-            </div>  
+<h2>مواقيت الامساك:</h2>
+<table class="imesak">
+    <tr>
+        <th>الأحد</th>
+        <th>الاثنين</th>
+        <th>الثلثاء</th>
+        <th>الأربعاء</th>
+        <th>الخميس</th>
+        <th>الجمعة</th>
+        <th>السبت</th>
+    </tr>
+    <tr>
+        <td>5.05</td>
+        <td>5.05</td>
+        <td>5.07</td>
+        <td>5.12</td>
+        <td>5.18</td>
+        <td>5.20</td>
+        <td>5.21</td>
+    </tr>
+</table>
+
+
+
+
+<h2>مواقيت الصلاة:</h2>
+        <div id="salate">
+           <table>
+            <tr>
+                <th>    صلاةالفجر </th>
+                <th>الشروق</th>
+                <th> صلاة الظهر</th>
+                <th> صلاة  العصر</th>
+                <th> صلاة المغرب</th>
+                <th> صلاة العشاء</th>
+          </tr>
+          <td>4.46</td>
+          <td>6.03</td>
+          <td>12.05</td>
+          <td>15.31</td>
+          <td>18.05</td>
+          <td>19.21</td>
+           </table>
+          
+
+
+
+
+
+
+
+
         </div>
-
-
-
+    </div>
         </body>
        
 </html>
