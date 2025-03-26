@@ -1,0 +1,27 @@
+.container{
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+
+  
+
+}
+.clock{
+    border: 1px solid #606060;
+    color: green;
+    padding: 40px;
+    border-radius: 10px;
+    background-color:white;
+}
+.clock ul{
+    list-style: none;
+    display: flex;
+    font-size: 40px;
+    gap: 15px;
+}
+#date{
+    font-size: 20px ;
+    text-align: center;
+    padding-left: 20px;
+  
+}
